@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist {
+    display: flex;
+    gap: 3rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.left-container, .right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.left-container {
+    background-color: #3C2A4D;
+    width: 70%;
+    padding-left: 3rem;
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #FFF1F4, #D8B4E2 70%);
+    width: 30%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.icons .fa-brands {
+    color: #bbb;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.icons .fa-brands:hover {
+    cursor: pointer;
+    color: #F6CED8;
+}
+
+.content {
+    margin-left: 3rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span {
+    color: #F6CED8;
+}
+
+.content h5 {
+    font-size: 2rem;
+    color: #F6CED8;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+
+.btn-container button {
+    border: 0.1rem solid #D8B4E2;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #D8B4E2;
+    cursor: pointer;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.btn-container button:hover {
+    background-color: #D8B4E2;
+    color: #3C2A4D;
+}
+
+.design .rectangle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 20%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.rectangle:nth-child(1) {
+    background: linear-gradient(90deg, transparent, #3C2A4D 50%);
+    width: 5rem;
+}
+
+.rectangle:nth-child(2) {
+    width: 20rem;
+    background-image: url("profile.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow:
+        0 0 1rem #fff,
+        inset 0 0 1rem #fff,
+        0 0 2rem #D8B4E2,
+        inset 0 0 2rem #D8B4E2,
+        0 0 2rem #D8B4E2,
+        inset 0 0 2rem #D8B4E2;
+}
+
+.navlist li a::after, .navlist .active::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after, .navlist .active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.section {
+    background: #D8B4E2;
+    padding: 5% 10%;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-level {
+    background: #fff;
+    width: 100%;
+    height: 0.7rem;
+    margin-top: 0.7rem;
+    border-radius: 3rem;
+    position: relative;
+}
+
+.skill-bar {
+    background: #F6CED8;
+    position: absolute;
+    inset: 0;
+    border-radius: 3rem;
+}
+
+.html { width: 85%; }
+.bootstrap { width: 65%; }
+.c { width: 75%; }
+.cpp { width: 80%; }
+.javascript { width: 60%; }
+.css { width: 70%; }
+
+footer {
+    background-color: #D8B4E2;
+    color: #3C2A4D;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: #bbb;
+}
+
+.social-links a {
+    color: #3C2A4D;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #F6CED8;
+}
